@@ -6,7 +6,6 @@ var MainView = function(mainElement){
 
 MainView.prototype = {
   render: function(gif){
-    console.log(gif)
     div = document.createElement('div');
     div.className = "gifDiv"
     img = document.createElement('img');
