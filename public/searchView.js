@@ -12,9 +12,18 @@ var SearchView = function(searchElement, searchButton){
   SearchView.prototype = {
       refresh: function(){
         var input = document.querySelector('#search') ;
-        this.tag = input.value;
+        if(input === ""){
+
+          window.location.reload();
+          console.log(input)
+        }else
+        {
+        var replaced = input.value.replace(/\s/g, '+');
+          console.log(replaced)
+        this.tag = replaced;
         localStorage.setItem('search', input.value);
        window.location.reload();
+        }
       },
 
 
